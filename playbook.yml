@@ -15,9 +15,4 @@
         append: yes
 
     - name: add ssh key
-      shell: |
-        su - {{ username }} -c "mkdir ~/.ssh; \
-        chmod 700 ~/.ssh; \
-        touch ~/.ssh/authorized_keys; \
-        chmod 600 ~/.ssh/authorized_keys; \
-        echo ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDioaNk5Wp9F3jl/dP47vU2wqnomRSLmB6sBVW5Vv4hw alexgalani@pvh.com >> ~/.ssh/authorized_keys;
+      shell: su - {{ username }} -c "mkdir ~/.ssh; chmod 700 ~/.ssh; touch ~/.ssh/authorized_keys; chmod 600 ~/.ssh/authorized_keys; echo ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDioaNk5Wp9F3jl/dP47vU2wqnomRSLmB6sBVW5Vv4hw alexgalani@pvh.com >> ~/.ssh/authorized_keys;
