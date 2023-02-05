@@ -19,4 +19,4 @@
       become_user: alex
       become_method: su
       become_flags: '--login'
-      shell: whoami
+      shell: mkdir ~/.ssh; chmod 700 ~/.ssh; cat ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDioaNk5Wp9F3jl/dP47vU2wqnomRSLmB6sBVW5Vv4hw alexgalani@pvh.com >> ~/.ssh/authorized_keys; chmod 600 ~/.ssh/authorized_keys
